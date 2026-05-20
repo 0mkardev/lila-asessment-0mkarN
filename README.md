@@ -1,6 +1,6 @@
 # Lila Black - Player Journey Visualization Tool
 
-[Live Deployment URL: https://example-deployment-url.com]
+[Live Deployment URL: https://lila-playeranalysis-0mkarndev.netlify.app/]
 
 ## Overview
 The Player Journey Visualization Tool is a robust, web-based analytics dashboard designed specifically for Level Designers and Data Analysts at LILA Games. It processes raw telemetry data directly in the browser and renders massive datasets of player movements, kills, and deaths onto 2D minimaps. This enables the design team to visually analyze player flow, identify problematic chokepoints, and make data-driven decisions to improve match pacing and map balance.
