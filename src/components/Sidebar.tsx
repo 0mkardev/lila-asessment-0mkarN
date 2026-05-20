@@ -41,7 +41,7 @@ export const Sidebar: React.FC = () => {
   }, [store.selectedDate, store.selectedMatch]);
 
   const dates = Object.keys(index).sort();
-  const currentMatches = index[store.selectedDate] || [];
+  const currentMatches = (store.selectedDate ? index[store.selectedDate] : null) || [];
 
   return (
     <div className="w-80 h-full bg-gray-900 border-r border-gray-800 p-4 flex flex-col gap-6 overflow-y-auto z-10 shadow-2xl">
