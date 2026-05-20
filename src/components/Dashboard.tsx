@@ -35,6 +35,84 @@ export const Dashboard: React.FC = () => {
 
         {selectedMatch && <TimelineControls />}
       </main>
+
+      {/* Always-visible author attribution badge */}
+      <div
+        style={{
+          position: 'fixed',
+          top: '16px',
+          right: '16px',
+          zIndex: 9999,
+          background: 'rgba(15, 15, 25, 0.75)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          border: '1px solid rgba(139, 92, 246, 0.35)',
+          borderRadius: '12px',
+          padding: '10px 16px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '4px',
+          boxShadow: '0 4px 24px rgba(139,92,246,0.18), 0 1.5px 6px rgba(0,0,0,0.5)',
+          minWidth: '220px',
+        }}
+      >
+        {/* Name row */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <span style={{
+            width: '8px', height: '8px', borderRadius: '50%',
+            background: 'linear-gradient(135deg,#a78bfa,#6d28d9)',
+            flexShrink: 0,
+            boxShadow: '0 0 6px #a78bfa',
+          }} />
+          <span style={{
+            fontWeight: 700,
+            fontSize: '13px',
+            letterSpacing: '0.01em',
+            background: 'linear-gradient(90deg,#c4b5fd,#e0e7ff)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+          }}>
+            Omkar Nakate
+          </span>
+        </div>
+
+        {/* Email row */}
+        <a
+          href="mailto:omkarndev@gmail.com"
+          style={{
+            fontSize: '11px',
+            color: '#94a3b8',
+            textDecoration: 'none',
+            paddingLeft: '16px',
+            transition: 'color 0.2s',
+          }}
+          onMouseEnter={e => (e.currentTarget.style.color = '#c4b5fd')}
+          onMouseLeave={e => (e.currentTarget.style.color = '#94a3b8')}
+        >
+          📧 omkarndev@gmail.com
+        </a>
+
+        {/* GitHub row */}
+        <a
+          href="https://github.com/0mkardev/lila-asessment-0mkarN"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            fontSize: '11px',
+            color: '#94a3b8',
+            textDecoration: 'none',
+            paddingLeft: '16px',
+            transition: 'color 0.2s',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
+          }}
+          onMouseEnter={e => (e.currentTarget.style.color = '#c4b5fd')}
+          onMouseLeave={e => (e.currentTarget.style.color = '#94a3b8')}
+        >
+          🔗 github.com/0mkardev/lila-asessment-0mkarN
+        </a>
+      </div>
     </div>
   );
 };
